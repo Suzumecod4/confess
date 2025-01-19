@@ -19,7 +19,7 @@
     if (!document.createElement('canvas').getContext) {
         var msg = document.createElement("div");
         msg.id = "errorMsg";
-        msg.innerHTML = "您的浏览器不支持 HTML5!<br/>推荐使用 Chrome 14+/IE 9+/Firefox 7+/Safari 4+ 等高版本的主流浏览器";
+        msg.innerHTML = "Your brower dose not support HTML5!<br/>推荐使用 Chrome 14+/IE 9+/Firefox 7+/Safari 4+ Highest version of mainstream browsers";
         document.body.appendChild(msg);
         $("#code").css("display", "none")
         $("#copyright").css("position", "absolute");
@@ -27,12 +27,12 @@
         document.execCommand("stop");
     } else {
 
-        // 画心
+        // Heart
         setTimeout(function() {
             startHeartAnimation();
         }, 110000);
 
-        // 计算相爱时间
+        // Calculate Love time
         timeElapse(together);
         setInterval(function() {
             timeElapse(together);
@@ -54,5 +54,7 @@ const bgMusic = document.getElementById('bgMusic');
 bgMusic.addEventListener('ended', function() {
     bgMusic.pause();  // Stop the audio
     bgMusic.currentTime = 0;  // Reset the audio to the start
+    bgMusic.removeEventListener('ended', arguments.callee);  // Remove the event listener so it doesn't trigger again
 });
+
 
