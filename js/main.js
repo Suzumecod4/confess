@@ -52,9 +52,6 @@ const bgMusic = document.getElementById('bgMusic');
 
 // Event listener to stop the audio once it ends
 bgMusic.addEventListener('ended', function() {
-    bgMusic.pause();  // Stop the audio
     bgMusic.currentTime = 0;  // Reset the audio to the start
-    bgMusic.removeEventListener('ended', arguments.callee);  // Remove the event listener so it doesn't trigger again
 });
-
 
