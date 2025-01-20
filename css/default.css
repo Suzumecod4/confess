@@ -172,3 +172,31 @@ img {
     left: 75%;
 }
 
+#calligraphyName {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 36px;
+    color: #d2691e;
+    display: none;
+    animation: fadeIn 3s ease-in-out, flowerAnimation 5s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flowerAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(5deg);
+    }
+}
