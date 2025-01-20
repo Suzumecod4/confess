@@ -6,7 +6,7 @@
     var offsetY = $("#loveHeart").height() / 2 - 55;
     // 设置时间
     var together = new Date();
-    together.setFullYear(2023, 6, 26);
+    together.setFullYear(2023, 06, 26);
     together.setHours(20);
     together.setMinutes(0);
     together.setSeconds(0);
